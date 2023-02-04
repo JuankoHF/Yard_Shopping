@@ -1,0 +1,197 @@
+@import './global.scss';
+
+nav {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--very-light-pink);
+}
+.menu-header {
+  display: none;
+}
+.logo-header {
+  width: 100px;
+}
+.navbar-left ul,
+.navbar-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-left ul {
+  margin-left: 12px;
+}
+.navbar-left ul li a,
+.navbar-right ul li a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 8px;
+  border-radius: 8px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+}
+.navbar-email {
+  color: var(--hospital-green);
+  font-size: var(--md);
+  font-weight: bold;
+  margin-right: 12px;
+}
+.navbar-shopping-cart {
+  position: relative;
+}
+.navbar-shopping-cart div {
+  width: 16px;
+  height: 16px;
+  background-color: var(--hospital-green);
+  border-radius: 50%;
+  font-size: var(--sm);
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_element {
+  width: 160px;
+	height: auto;
+  top: 61px;
+	right: 50px;
+  position: absolute;
+  z-index: 8;
+  animation-name: move;
+	animation-duration: 600ms;
+
+	@keyframes move {
+		from {
+			top: 78px;
+			opacity: 0.3;
+			background-color: var(--hospital-green);	
+		}
+		to {
+			top: 61px;
+			opacity: 1;
+		}
+	}
+}
+.container_Myorder {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  border-bottom: solid 2px var(--very-light-pink);
+  z-index: 9;
+  right: 0;
+	top: 61px;
+	background-color: rgba(46, 45, 45, 0.601);
+
+	animation-name: order;
+	animation-duration: 600ms;
+	animation-iteration-count: 1;
+
+	@keyframes order {
+		from {
+			top: 90px;
+			opacity: 0.3;
+			background-color: var(--hospital-green);
+		}
+		to{
+			top: 62px;
+			opacity: 1;
+		}
+	}
+}
+.to_home  {
+  display: none;
+}
+@media (max-width: 790px) {
+  .menu-header {
+    display: block;
+  }
+  
+  .navbar-left  {
+    width: 70%;
+    max-width: 280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 61px;
+    left: 0px;
+    z-index: 10;
+    padding: 10px 0;
+    background-color: var(--white);
+    border-radius: 0 0 8px 0;
+    border-right: solid 1px var(--very-light-pink);
+    border-bottom: solid 1px var(--very-light-pink);
+
+    animation-name: animeMenu;
+    animation-duration: 800ms;
+
+    @keyframes animeMenu {
+      from {
+        width: 0px;
+        opacity: 0.5;
+			  background-color: var(--hospital-green);
+      
+      }
+      to {
+        width: 70%;
+        opacity: 1;
+      }
+      
+    }
+  }
+  .logo-header {
+    padding: 6px;
+	  /*background-color: rgb(137, 137, 137);*/
+	  border-radius: 4px;
+    border: solid 1px var(--black);
+  }
+  .activate {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 460px!important;
+    margin-top: 40px!important;
+    margin-left: 0px!important;
+    
+  }
+  .activate li {
+    margin-top: 24px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-bottom: solid 1px var(--very-light-pink);
+    text-align: center;
+  }
+  .activate li a {
+    color: black;
+    font-weight: bold;
+  }
+  .to_home  {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    border-bottom: none!important;
+  }
+  .to_home a  {
+    color: white!important;
+    background-color: rgb(168, 30, 30);
+    font-size: var(--lg);
+    
+  }
+ 
+  
+}

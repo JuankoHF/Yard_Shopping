@@ -1,0 +1,79 @@
+@import './global.scss';
+
+.MyOrder {
+	width: 100%;
+	height: 100%;
+	padding: 24px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	background-color: rgba(46, 45, 45, 0.864);
+	z-index: 10;
+	
+	
+}
+
+.orders_continer {
+	width: 100%;
+	max-width: 400px;
+
+}
+.title-container a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: var(--hospital-green);
+	
+}
+.arrow {
+	transform: rotate(180deg);
+	margin-right: 8px;
+}
+.title {
+	width: auto;
+	padding: 6px;
+	border-radius: 8px;
+	font-size: var(--lg);
+	font-weight: bold;
+	background-color: var(--white);
+}
+.order {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 16px;
+	text-align: center;
+	background-color: var(--text-input-field);
+	margin-bottom: 24px;
+	border-radius: 8px;
+	padding: 0 24px;
+}
+.order p:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+}
+.order p span:nth-child(1) {
+	font-size: var(--md);
+	font-weight: bold;
+}
+.order p:nth-child(2) {
+	text-align: end;
+	font-weight: bold;
+}
+
+.primary-button {
+	background-color: var(--hospital-green);
+	border-radius: 8px;
+	border: none;
+	color: var(--white);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
+}
+@media (max-width: 640px) {
+	.MyOrder {
+		width: 100%;
+	}
+}

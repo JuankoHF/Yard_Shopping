@@ -1,0 +1,25 @@
+@import './global.scss';
+
+.ProductList {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 240px);
+	gap: 26px;
+	place-content: center;
+	margin: 3em 0 0 0;
+	padding: 0 20px;
+	
+}
+/*.not_found {
+	width: 70%;
+	max-width: 450px;
+	position: absolute;
+	text-align: center;
+	top: 300px;
+	
+}*/
+
+@media (max-width: 640px) {
+	.ProductList {
+		grid-template-columns: repeat(auto-fill, 140px);
+	}
+}

@@ -1,0 +1,37 @@
+@import './global.scss';
+
+.OrderItem {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 16px;
+	margin-bottom: 24px;
+	align-items: center;
+}
+.OrderItem figure {
+	margin: 0;
+	border: solid 4px white;
+	border-radius: 4px;
+}
+.OrderItem figure img {
+	width: 70px;
+	height: 70px;
+	border-radius: 20px;
+	object-fit: cover;
+}
+.OrderItem p:nth-child(2) {
+	color: white;
+}
+.OrderItem p:nth-child(3) {
+	font-size: var(--md);
+	font-weight: bold;
+	color: white;
+	
+}
+.close {
+	font-weight: bold;
+	padding: 0 5px;
+	background-color: rgb(174, 174, 174);
+	border-radius: 50%;
+	border: solid 1px rgb(158, 4, 4);
+	color: rgb(158, 4, 4);
+}
